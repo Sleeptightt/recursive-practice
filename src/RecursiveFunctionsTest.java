@@ -24,4 +24,25 @@ public class RecursiveFunctionsTest {
 		assertTrue("The sum is wrong", RecursiveFunctions.arraySummatory(new int[]{19,18,25,62,8765}, 0) == 8889);
 		assertTrue("The sum is wrong", RecursiveFunctions.arraySummatory(new int[]{312490,382190,3211,9000,8765}, 0) == 715656);
 	}
+	
+	@Test
+	public void isPalindromeTest(){
+		assertTrue("The function is wrong", !RecursiveFunctions.isPalindrome("casa", 0));
+		assertTrue("The function is wrong", RecursiveFunctions.isPalindrome("ana", 0));
+		assertTrue("The function is wrong", RecursiveFunctions.isPalindrome("anitalavalatina", 0));
+	}
+	
+	@Test
+	public void flipStringTest(){
+		assertTrue("The function is wrong", RecursiveFunctions.flipString("casa", 3).equals("asac"));
+		assertTrue("The function is wrong", RecursiveFunctions.flipString("saque 5.0", 8).equals("0.5 euqas"));
+		assertTrue("The function is wrong", RecursiveFunctions.flipString("Hola mundo", 9).equals("odnum aloH"));
+	}
+	
+	@Test
+	public void shuffleTest(){
+		assertTrue("The function is wrong", RecursiveFunctions.shuffle("ABCD", "EFGH", 0).equals("AEBFCGDH"));
+		assertTrue("The function is wrong", RecursiveFunctions.shuffle("HOLA", "JEJE", 0).equals("HJOELJAE"));
+		assertTrue("The function is wrong", RecursiveFunctions.shuffle("DIME", "LOOO", 0).equals("DLIOMOEO"));
+	}
 }
